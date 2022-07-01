@@ -482,3 +482,6 @@ body {
   transition: .3s;
 }
 
+.js-section {
+  visibility: visible;
+}
