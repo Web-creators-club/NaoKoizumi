@@ -1,14 +1,142 @@
 @charset "UTF-8";
 
+/* ========== フォント読み込み ========== */
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../asset/font/NotoSansJP-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../asset/font/NotoSansJP-Medium.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../asset/font/NotoSansJP-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+/* ========== Utility ========== */
+.u-works-bgi {
+  background-image: url(../asset/img/works-bgi.jpg);
+  background-repeat: no-repeat;
+}
+
+.u-contact-bgi {
+  background-image: url(../asset/img/contact-bgi.jpg);
+  background-repeat: no-repeat;
+}
+
+/* ========== Component ========== */
+/* ===== text ===== */
+.c-alphabet {
+  font-family: "Noto Serif", sans-serif;
+  font-weight: bold;
+  letter-spacing: .05em;
+  line-height: 1;
+}
+
+.c-japanese {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.c-section-title {
+  font-size: 60px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.c-section-title--white {
+  font-size: 60px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.c-section-title::after{
+  content: "";
+  width: 200px;
+  height: 5px;
+  background-color: #000000;
+}
+
+.c-section-title--white::after {
+  content: "";
+  width: 200px;
+  height: 5px;
+  background-color: #ffffff;
+}
+
+.c-text {
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: .05em;
+  line-height: 1.875;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.c-section-label {
+  font-size: 90px;
+  line-height: 1.666;
+}
+
+.c-link {
+  text-decoration: none;
+}
+
+/* ===== slide ===== */
+.c-slide {
+  width: 100%;
+}
+
+.c-slide > img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+/* ===== Button ===== */
+.c-button {
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: .05em;
+  line-height: 1.875;
+  width: 235px;
+  height: 59px;
+  background-color: #f7d43f;
+  border: none;
+  border-radius: 50px;
+}
+
+
 /* ========== Header ========== */
 .l-header {
   padding: 30px 0;
   width: 100%;
   position: fixed;
   z-index: 1000;
+  transition: .3s;
 }
 
-.p-nav {
+.l-header__inner {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -17,19 +145,19 @@
   color: #ffffff;
 }
 
-.p-nav__logo {
+.l-header__logo {
   font-size: 26px;
   color: inherit;
 }
 
-.p-nav__list {
+.p-nav-inner {
   display: flex;
   gap: 30px;
   list-style-type: none;
   color: inherit;
 }
 
-.p-nav__link {
+.p-nav-inner__item > a{
   color: inherit;
   font-size: 16px;
 }
@@ -48,14 +176,16 @@
 }
 
 .p-title__main {
-  font-size: 70px;
   position: absolute;
-  text-align: center;
   top: 400px;
+  font-size: 70px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .p-title__sub {
   font-size: 40px;
+  font-weight: bold;
 }
 
 .p-carousel {
@@ -64,13 +194,14 @@
   overflow: hidden;
 }
 
-.c-slide > img {
+.p-carousel__main {
   width: 100%;
-  height: 100vh;
-  vertical-align: top;
+  z-index: 1;
+  animation: carousel-slider-main 15s infinite; 
+  animation-delay: 3s;
 }
 
-.c-slide-wrap {
+.p-carousel__images {
   width: 300%;
   position: absolute;
   display: flex;
@@ -79,17 +210,6 @@
   z-index: 0;
   animation: carousel-slider 15s infinite;
   animation-delay: 3s;
-}
-
-.c-slide-wrap-main {
-  width: 100%;
-  z-index: 1;
-  animation: carousel-slider-main 15s infinite; 
-  animation-delay: 3s;
-}
-
-.c-slide {
-  width: 100%;
 }
 
 @keyframes carousel-slider {
@@ -110,3 +230,255 @@
   66.6% { transform: translateX(100%); }
   82% { transform: translateX(0%);}
 }
+
+
+/* ========== Concept ========== */
+.p-concept {
+  display: grid;
+  grid-template: 
+    "......   title    title    title"    auto
+    "......   ......   ......   ......"   70px
+    "subtitle subtitle subtitle subtitle" auto
+    "......   ......   ......   ......"   60px
+    "......   detail   detail   ......"   auto
+    "......   ......   ......   ......"   70px
+    "label    label    label    label"    auto
+    /100px 1fr 1fr 100px;
+}
+
+.p-concept__title {
+  grid-area: title;
+}
+
+.p-concept__subtitle {
+  grid-area: subtitle;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: .05em;
+  line-height: 1.666;
+}
+
+.p-concept__detail {
+  grid-area: detail;
+}
+
+.p-detail {
+  display: flex;
+  align-items: center;
+  gap: 120px;
+}
+
+.p-detail__text {
+  font-weight: bold;
+}
+
+.p-detail__image > img{
+  width: 440px;
+  height: 240px;
+  max-width: unset;
+}
+
+.p-concept__label {
+  grid-area: label;
+  color: #17171710;
+  display: flex;
+  justify-content: end;
+}
+
+
+/* ========== Works ========== */
+.p-works {
+  display: grid;
+  grid-template: 
+    "......   title    title    title"    auto
+    "......   ......   ......   ......"   80px
+    "......   group    group    ......"   auto
+    "......   ......   ......   ......"   80px
+    "......   button   button   ......"   auto
+    "......   ......   ......   ......"   70px
+    "label    label    label    label"    auto
+    /100px 1fr 1fr 100px;
+}
+
+.p-works__title {
+  grid-area: title;
+  color: #ffffff;
+  justify-content: end;
+}
+
+.p-works__group {
+  grid-area: group;
+}
+
+.p-card {
+  display: flex;
+  gap: 20px;
+}
+
+.p-card__item {
+    min-height: 334px;
+  background-color: #ffffff;
+}
+
+.p-card__image > img {
+  object-fit: cover;
+}
+
+.p-card__text {
+  padding: 25px 20px;
+}
+
+.p-works__button {
+  grid-area: button;
+  margin: 0 auto;
+}
+
+.p-works__label {
+  grid-area: label;
+  color: #ffffff10;
+}
+
+
+/* ========== Service ========== */
+.p-service {
+  display: grid;
+  grid-template: 
+    "......   title    title    title   ......"  auto
+    "......   ......   ......   ......  ......"  80px
+    "summary  summary  summary  summary summary" auto
+    "......   ......   ......   ......  ......"  70px
+    "label    label    label    label   ......"  auto
+    /220px    1fr      1fr      100px   120px;
+}
+
+.p-service__title {
+  grid-area: title;
+}
+
+.p-service__summary {
+  grid-area: summary;
+}
+
+.p-summary {
+  width: 100%;
+  height: 320px;
+  display: flex;
+}
+
+.p-summary__block {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+.p-summary__block:nth-child(1) {
+  background-image: url(../asset/img/service-img01.jpg);
+}
+
+.p-summary__block:nth-child(2) {
+  background-image: url(../asset/img/service-img02.jpg);
+}
+
+.p-summary__block:nth-child(3) {
+  background-image: url(../asset/img/service-img03.jpg);
+}
+
+.p-summary__block::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #17171730;
+  transition: .3s;
+}
+
+.p-summary__text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+  color: #ffffff;
+  font-style: italic;
+  z-index: 1;
+  transition: .3s;
+}
+
+.p-summary__text--hover:hover {
+  transition:.3s;
+  background-color: #282F3570;
+}
+
+
+.p-service__label {
+  grid-area: label;
+  display: flex;
+  justify-content: end;
+  color: #17171710;
+}
+
+
+/* ========== Contact ========== */
+.p-contact {
+  display: grid;
+  grid-template: 
+    "......   title    title    title"    auto
+    "......   ......   ......   ......"   80px
+    "......   text     text     ......"   auto
+    "......   ......   ......   ......"   40px
+    "......   button   button   ......"   auto
+    "......   ......   ......   ......"   70px
+    "label    label    label    label"    auto
+    /100px 1fr 1fr 100px;
+}
+
+.p-contact__title {
+  grid-area: title;
+  color: #ffffff;
+  justify-content: end;
+}
+
+.p-contact__text {
+  grid-area: text;
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.p-contact__button {
+  grid-area: button;
+  margin: 0 auto;
+}
+
+.p-contact__label {
+  grid-area: label;
+  color: #ffffff10;
+}
+
+
+/* ========== footer =========== */
+.l-footer {
+  padding: 30px 0;
+  width: 100%;
+}
+
+.l-footer__text {
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ========== JavaScript ========== */
+.js-header-bgc {
+  background-color: #282f35;
+  transition: .3s;
+}
+
