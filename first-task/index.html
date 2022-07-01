@@ -6,48 +6,114 @@
   <title>Cresta Design</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/layer.css">
-  <link rel="stylesheet" href="css/component.css">
+  <link rel="stylesheet" href="css/layout.css">
   <link href=“https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+JP&display=swap” rel=“stylesheet”>
 </head>
 <body>
-  <header id="" class="l-header c-alphabet">
-    <nav class="l-w1200 p-nav">
-      <p class="p-nav__logo">Cresta Design</p>
-      <ul class="p-nav__list">
-        <li class="p-nav__listitem">
-          <a href="#concept" class="p-nav__link c-link">Concept</a>
+  <header id="js-header" class="l-header c-alphabet">
+    <nav class="l-header__inner l-wrapper">
+      <p class="l-header__logo">Cresta Design</p>
+      <ul class="p-nav-inner">
+        <li class="p-nav-inner__item">
+          <a href="#concept" class="c-link">Concept</a>
         </li>
-        <li class="p-nav__listitem">
-          <a href="#service" class="p-nav__link c-link">Service</a>
+        <li class="p-nav-inner__item">
+          <a href="#service" class="c-link">Service</a>
         </li>
-        <li class="p-nav__listitem">
-          <a href="#works" class="p-nav__link c-link">Works</a>
+        <li class="p-nav-inner__item">
+          <a href="#works" class="c-link">Works</a>
         </li>
-        <li class="p-nav__listitem">
-          <a href="#contact" class="p-nav__link c-link">Contact</a>
+        <li class="p-nav-inner__item">
+          <a href="" class="c-link">Contact</a>
         </li>
       </ul>
     </nav>
   </header>
   <section class="p-first-view">
-    <div class="p-title l-w1200">
+    <div class="p-title l-wrapper">
       <h1 class="p-title__main c-alphabet">Design for Smile.<br>
         <span class="p-title__sub c-japanese">快適なオフィスをデザインする</span>
       </h1>
     </div>
     <div class="p-carousel">
-      <div class="c-slide-wrap-main">
+      <div class="p-carousel__main">
         <div class="c-slide">
           <img src="asset/img/fv-bgi_01.jpg" alt="">
         </div>
       </div> 
-      <div class="c-slide-wrap">
+      <div class="p-carousel__images">
         <div class="c-slide"><img src="asset/img/fv-bgi_01.jpg" alt=""></div>
         <div class="c-slide"><img src="asset/img/fv-bgi_02.jpg" alt=""></div>
         <div class="c-slide"><img src="asset/img/fv-bgi_03.jpg" alt=""></div>
       </div>
     </div>
   </section>
+  <main class="l-main js-main-section">
+    <section id="js-section" id="concept" class="l-section">
+      <div class="p-concept l-wrapper">
+        <h2 class="p-concept__title c-section-title c-alphabet">CONCEPT</h2>
+        <h3 class="p-concept__subtitle c-japanese">"働きたくなる空間"をデザインすることで<br>人々を幸せにする。</h3>
+        <div class="p-concept__detail p-detail">
+          <p class="p-detail__text c-text c-japanese">
+            私たちは、オフィスに特化した空間デザイン専門としております。その理由は、「働きたくなる空間で仕事ができれば多くの人を幸せにできるのではないか」と考えるためです。そんな想いの株式会社Cresta Designだからこそできる空間デザインを提供させていただきます。
+          </p>
+          <p class="p-detail__image">
+            <img src="asset/img/concept-image.jpg" alt="働きたくなる空間をテーマにデザインされているオフィス">
+          </p>
+        </div>
+        <span class="p-concept__label c-alphabet c-section-label">Our Concept</span>
+      </div>
+    </section>
+    <section id="works" class="l-section u-works-bgi">
+      <div class="p-works l-wrapper">
+        <h2 class="p-works__title c-section-title--white c-alphabet">Works</h2>
+        <div class="p-works__group p-card">
+          <div class="p-card__item">
+            <p class="p-card__image"><img src="asset/img/card-img01.jpg" alt=""></p>
+            <p class="p-card__text c-text c-japanese">新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
+          </div>
+          <div class="p-card__item">
+            <p class="p-card__image"><img src="asset/img/card-img02.jpg" alt=""></p>
+            <p class="p-card__text c-text c-japanese">新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
+          </div>
+          <div class="p-card__item">
+            <p class="p-card__image"><img src="asset/img/card-img03.jpg" alt=""></p>
+            <p class="p-card__text c-text c-japanese">新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
+          </div>
+        </div>
+        <button class="p-works__button c-button c-alphabet">View more</button>
+        <span class="p-works__label c-alphabet c-section-label">Our Works</span>
+      </div>
+    </section>
+    <section id="service" class="l-section">
+      <div class="p-service">
+        <h2 class="p-service__title c-section-title c-alphabet">Service</h2>
+        <div class="p-service__summary p-summary">
+          <div class="p-summary__block">
+            <a class="p-summary__text p-summary__text--hover c-alphabet">Hearing</a>
+          </div>
+          <div class="p-summary__block">
+            <a class="p-summary__text p-summary__text--hover c-alphabet">Planning</a>
+          </div>
+          <div class="p-summary__block">
+            <a class="p-summary__text p-summary__text--hover c-alphabet">Direction</a>
+          </div>
+        </div>
+        <span class="p-service__label c-alphabet c-section-label">Our Service</span>
+      </div>
+    </section>
+    <section class="l-section u-contact-bgi">
+      <div class="p-contact l-wrapper">
+        <h2 class="p-contact__title c-section-title--white c-alphabet">Contact</h2>
+        <p class="p-contact__text c-text c-japanese">お気軽にご相談ください</p>
+        <button class="p-contact__button c-button c-alphabet">Contact</button>
+        <span class="p-contact__label c-alphabet  c-section-label">Contact us</span>
+      </div>
+    </section>
+  </main>
+  <footer class="l-footer">
+    <p class="l-footer__text c-alphabet">&copy;cresta.design all rights reserved</p>
+  </footer>
+  <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
