@@ -9,10 +9,12 @@
   <link rel="stylesheet" href="css/layout.css">
   <link href=“https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+JP&display=swap” rel=“stylesheet”>
 </head>
-<body>
+<body  id="top">
   <header id="js-header" class="l-header c-alphabet">
-    <nav class="l-header__inner l-wrapper">
-      <p class="l-header__logo">Cresta Design</p>
+    <nav id="js-nav" class="l-header__inner l-wrapper">
+      <p class="l-header__logo">
+        <a href="#top" class="c-link">Cresta Design</a>
+      </p>
       <ul class="p-nav-inner">
         <li class="p-nav-inner__item">
           <a href="#concept" class="c-link">Concept</a>
@@ -27,9 +29,14 @@
           <a href="" class="c-link">Contact</a>
         </li>
       </ul>
+      <div class="p-hg-menu">
+        <span class="c-line"></span>
+        <span class="c-line"></span>
+        <span class="c-line"></span>
+      </div>
     </nav>
   </header>
-  <section class="p-first-view">
+  <section class="p-first-view u-position">
     <div class="p-title l-wrapper">
       <h1 class="p-title__main c-alphabet">Design for Smile.<br>
         <span class="p-title__sub c-japanese">快適なオフィスをデザインする</span>
@@ -50,10 +57,10 @@
   </section>
   <main class="l-main js-main-section">
     <div id="js-section"></div>
-    <section id="concept" class="l-section">
+    <section id="concept" class="l-section ">
       <div class="p-concept l-wrapper">
         <h2 class="p-concept__title c-section-title c-alphabet">CONCEPT</h2>
-        <h3 class="p-concept__subtitle c-japanese">"働きたくなる空間"をデザインすることで<br>人々を幸せにする。</h3>
+        <h3 class="p-concept__subtitle c-japanese">"働きたくなる空間"をデザインすることで人々を幸せにする。</h3>
         <div class="p-concept__detail p-detail">
           <p class="p-detail__text c-text c-japanese">
             私たちは、オフィスに特化した空間デザイン専門としております。その理由は、「働きたくなる空間で仕事ができれば多くの人を幸せにできるのではないか」と考えるためです。そんな想いの株式会社Cresta Designだからこそできる空間デザインを提供させていただきます。
@@ -86,7 +93,7 @@
         <span class="p-works__label c-alphabet c-section-label">Our Works</span>
       </div>
     </section>
-    <section id="service" class="l-section">
+    <section id="service" class="l-section u-no-padding">
       <div class="p-service">
         <h2 class="p-service__title c-section-title c-alphabet">Service</h2>
         <div class="p-service__summary p-summary">
