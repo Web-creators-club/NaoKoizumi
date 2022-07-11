@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cresta Design | Contact</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link href=“https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+JP&display=swap” rel=“stylesheet”>
+</head>
+<body id="top">
+  <header id="js-header" class="l-header c-alphabet">
+    <nav id="js-nav" class="l-header__inner l-wrapper">
+      <p class="l-header__logo">
+        <a href="#top" class="c-link">Cresta Design</a>
+      </p>
+      <ul id="js-hg-menu" class="p-nav-inner">
+        <li class="p-nav-inner__item">
+          <a href="index.html#concept" class="c-link">Concept</a>
+        </li>
+        <li class="p-nav-inner__item">
+          <a href="index.html#service" class="c-link">Service</a>
+        </li>
+        <li class="p-nav-inner__item">
+          <a href="index.html#works" class="c-link">Works</a>
+        </li>
+        <li class="p-nav-inner__item">
+          <a href="#" class="c-link">Contact</a>
+        </li>
+      </ul>
+      <div id="js-button" class="p-hg-menu">
+        <span class="c-line"></span>
+        <span class="c-line"></span>
+        <span class="c-line"></span>
+      </div>
+    </nav>
+  </header>
+  <div class="p-contact-form u-contact-bgi2">
+    <h1 class="p-contact-form__title c-alphabet">Contact</h1>
+    <span class="p-contact-form__label c-alphabet c-section-label">Contact us</span>
+  </div>
+  <div id="js-section"></div>
+  <form class="p-form l-section" action="" method="post">
+    <div class="p-form__detail">
+      <div class="p-form__heading c-japanese">お問い合わせ内容</div>
+      <div class="p-form__checkbox">
+        <div>
+          <input type="checkbox" id="request-info" name="request-info">
+          <label for="request-info">資料請求</label>
+        </div>
+        <div>
+          <input type="checkbox" id="phone" name="phone">
+          <label for="phone">電話でのご相談を希望</label>
+        </div>
+        <div>
+          <input type="checkbox" id="application" name="application">
+          <label for="application">申し込み</label>
+        </div>
+      </div>
+    </div>
+    <div class="p-form__detail">
+      <label for="person" class="p-form__heading c-japanese">担当者名</label>
+      <input id="person" class="p-form__text-field" type="text">
+    </div>
+    <div class="p-form__detail">
+      <label for="phone-number" class="p-form__heading c-japanese">電話番号</label>
+      <input id="phone-number" class="p-form__text-field" type="tel" required>
+    </div>
+    <div class="p-form__detail">
+      <label for="mail" class="p-form__heading c-japanese">メールアドレス</label>
+      <input id="mail" class="p-form__text-field" type="email" required>
+    </div>
+    <div class="p-form__detail">
+      <label for="other" class="p-form__heading c-japanese">その他</label>
+      <textarea id="other" class="p-form__text-field" cols="30" rows="10"></textarea>
+    </div>
+    <button class="p-form__button c-button c-alphabet">
+      <a href="">Submit</a>
+    </button>
+  </form>
+  <footer class="l-footer">
+    <p class="l-footer__text c-alphabet">&copy;cresta.design all rights reserved</p>
+  </footer>
+  <script src="js/index.js"></script>
+</body>
+</html>
