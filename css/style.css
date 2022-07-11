@@ -62,6 +62,7 @@ body {
 .c-alphabet {
   font-family: "Noto Serif", sans-serif;
   font-weight: bold;
+  font-style: italic;
   letter-spacing: .05em;
   line-height: 1;
 }
@@ -135,6 +136,7 @@ body {
 .c-button {
   font-size: 16px;
   font-weight: normal;
+  font-style: normal;
   letter-spacing: .05em;
   line-height: 1.875;
   width: 235px;
@@ -481,6 +483,11 @@ body {
   margin: 0 auto;
 }
 
+.p-contact__button > a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .p-contact__label {
   grid-area: label;
   color: #ffffff10;
@@ -502,10 +509,6 @@ body {
 .js-header-bgc {
   background-color: #282f35;
   transition: .3s;
-}
-
-.js-section {
-  visibility: visible;
 }
 
 @media screen and (max-width: 393px) {
@@ -546,7 +549,7 @@ body {
     font-size: 40px;
     line-height: 1.666;
   }
-  /* hamburger-menu */
+  /* ====== line ===== */
   .c-line {
     content: "";
     display: block;
@@ -564,6 +567,37 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+  }
+
+  .is-open {
+    padding: unset;
+    margin: unset;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #282f35;
+  }
+
+  .close-button {
+    z-index: 9999;
+  }
+
+  .close-button > span:nth-child(2) {
+    display: none;
+  }
+  .close-button > span:nth-child(1) {
+    transform: rotateZ(45deg);
+    transform-origin: 20% 100%;
+  }
+  .close-button > span:nth-child(3) {
+    transform: rotateZ(-45deg);
+    transform-origin: 20% 0;
   }
 
   /* ========== First view ========== */

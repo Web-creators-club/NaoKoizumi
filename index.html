@@ -6,7 +6,6 @@
   <title>Cresta Design</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/layout.css">
   <link href=“https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+JP&display=swap” rel=“stylesheet”>
 </head>
 <body  id="top">
@@ -15,7 +14,7 @@
       <p class="l-header__logo">
         <a href="#top" class="c-link">Cresta Design</a>
       </p>
-      <ul class="p-nav-inner">
+      <ul id="js-hg-menu" class="p-nav-inner">
         <li class="p-nav-inner__item">
           <a href="#concept" class="c-link">Concept</a>
         </li>
@@ -26,10 +25,10 @@
           <a href="#works" class="c-link">Works</a>
         </li>
         <li class="p-nav-inner__item">
-          <a href="" class="c-link">Contact</a>
+          <a href="contact.html" class="c-link">Contact</a>
         </li>
       </ul>
-      <div class="p-hg-menu">
+      <div id="js-button" class="p-hg-menu">
         <span class="c-line"></span>
         <span class="c-line"></span>
         <span class="c-line"></span>
@@ -114,7 +113,9 @@
       <div class="p-contact l-wrapper">
         <h2 class="p-contact__title c-section-title--white c-alphabet">Contact</h2>
         <p class="p-contact__text c-text c-japanese">お気軽にご相談ください</p>
-        <button class="p-contact__button c-button c-alphabet">Contact</button>
+        <button class="p-contact__button c-button c-alphabet">
+          <a href="contact.html">Contact</a>
+        </button>
         <span class="p-contact__label c-alphabet  c-section-label">Contact us</span>
       </div>
     </section>
